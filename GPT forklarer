@@ -1,0 +1,67 @@
+:where(.wp-site-blocks *:focus) {
+    outline-width: 2px;
+    outline-style: solid;
+}
+
+/* Skjul elementer for innloggede brukere */
+body:not(.logged-in) .logged-in-only {
+    display: none;
+}
+
+/* Skjul elementer for ikke-innloggede brukere */
+body.logged-in .logged-out-only {
+    display: none;
+}
+
+.scrollable-column {
+    max-height: 600px; /* Begrenser høyden */
+    overflow-y: auto; /* Gjør kolonnen rullbar */
+    position: sticky; /* Sticky oppførsel */
+    top: 0; /* Festes øverst */
+    background-color: #fff; /* Valgfritt */
+    z-index: 10; /* Foran annet innhold */
+}
+
+.scrollable-column {
+    max-height: 1000px;
+    overflow-y: scroll; /* Aktiver vertikal scrolling */
+    scrollbar-width: none; /* Skjuler scrollbaren som standard i Firefox */
+    -ms-overflow-style: none; /* Skjuler scrollbaren som standard i IE/Edge */
+}
+
+.scrollable-column::-webkit-scrollbar {
+    width: 0px; /* Skjuler scrollbaren som standard i WebKit-nettlesere */
+}
+
+.scrollable-column:hover {
+    scrollbar-width: thin; /* Viser en tynn scrollbar ved hover i Firefox */
+}
+
+.scrollable-column:hover::-webkit-scrollbar {
+    width: 8px; /* Viser scrollbaren ved hover i WebKit-nettlesere */
+}
+
+.scrollable-column:hover::-webkit-scrollbar-thumb {
+    background: gray; /* Grå scrollhåndtak ved hover */
+    border-radius: 4px; /* Runde hjørner for scrollhåndtaket */
+}
+
+.scrollable-column:hover::-webkit-scrollbar-track {
+    background: transparent; /* Gjennomsiktig spor ved hover */
+}
+
+.meny-overskrift a .wp-block-navigation-item__label {
+    font-size: 20px !important;
+    font-weight: bold !important;
+    color: #05143B !important;
+    text-decoration: underline !important;
+}
+
+.meny-overskrift a {
+    pointer-events: none; /* Gjør den ikke klikkbar */
+}
+
+.meny-element > a {
+    display: block; /* Sikrer at lenkene oppfører seg som blokkelementer */
+    padding-left: 20px; /* Innrykk for elementene på flere linjer */
+}
